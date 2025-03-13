@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
 </head>
 <body>
-    
-    <div class="calculadora">
+    <header>
+        <h1>Bienvenido a mi calculadora</h1>
+    </header>
+    <main>
+        <h4>Ingrese la operacion que quiera usar:</h4>
+        <button id="suma">Suma</button>
+            <div id="pestaña1" class="pestaña-oculta1">
+                <h5>Ingrese el primer numero</h5>
+                <input id="n1" type="number" name="n1s" placeholder="Primer Numero">
+                <h5>Ingrese el segundo numero</h5>
+                <input id="n2" type="number" name="n2s" placeholder="Segundo Numero">
+                <button onclick="sumaArit()">Calcular</button>
+                <p id="result1"></p>
+            </div>
+        <button id="resta">Resta</button>
+            <div id="pestaña2" class="pestaña-oculta2">
+                <h5>Ingrese el primer numero</h5>
+                <input id="n3" type="number" name="n1r" placeholder="Primer Numero">
+                <h5>Ingrese el segundo numero</h5>
+                <input id="n4" type="number" name="n2r" placeholder="Segundo Numero">
+                <button onclick="restaArit()">Calcular</button>
+                <p id="result2"></p>
+            </div>
+        <button id="mult">Multiplicación</button>
+            <div id="pestaña3" class="pestaña-oculta3">
+                <h5>Ingrese el primer numero</h5>
+                <input id="n5" type="number" name="n1m" placeholder="Primer Numero">
+                <h5>Ingrese el segundo numero</h5>
+                <input id="n6" type="number" name="n2m" placeholder="Segundo Numero">
+                <button onclick="multArit()">Calcular</button>
+                <p id="result3"></p>
+            </div>
+        <button id="div">División</button>
+            <div id="pestaña4" class="pestaña-oculta4">
+                <h5>Ingrese el primer numero</h5>
+                <input id="n7" type="number" name="n1d" placeholder="Primer Numero">
+                <h5>Ingrese el segundo numero</h5>
+                <input id="n8" type="number" name="n2d" placeholder="Segundo Numero">
+                <button onclick="divArit()">Calcular</button>
+                <p id="result4"></p>
+            </div>
 
-        <div class="pantalla">0</div>
-        
-        <button id="c" class="btn">C</button>
-        <button id="borrar" class="btn">←</button>
-        <button class="btn">/</button>
-        <button class="btn">*</button>
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
-        <button class="btn">-</button>
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn">+</button>
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button id="igual" class="btn">=</button>
-        <button id="cero" class="btn">0</button>
-        <button class="btn">.</button>
-    </div>
-
-
-
-    <script src="script.js"></script>
+    </main>
 </body>
+<script src="script.js"></script>
 </html>

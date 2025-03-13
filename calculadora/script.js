@@ -1,37 +1,65 @@
-const pantalla = document.querySelector(".pantalla");
-const botones = document.querySelectorAll(".btn");
+const toggleButton1 = document.getElementById('suma');
+const pestaña1 = document.getElementById('pestaña1');
 
-botones.forEach(boton => {
-    boton.addEventListener("click", () => {
-        const botonApretado = boton.textContent;
+const toggleButton2 = document.getElementById('resta');
+const pestaña2 = document.getElementById('pestaña2');
 
-        if(boton.id === "c") {
-            pantalla.textContent = "0";
-            return;
-        }
+const toggleButton3 = document.getElementById('mult');
+const pestaña3 = document.getElementById('pestaña3');
 
-        if (boton.id === "borrar") {
-            if (pantalla.textContent.length === 1 || pantalla.textContent === "ERROR!") {
-                pantalla.textContent = "0";
-            } else {
-                pantalla.textContent = pantalla.textContent.slice(0, -1);
-            }
-            return;
-        }
+const toggleButton4 = document.getElementById('div');
+const pestaña4 = document.getElementById('pestaña4');
 
-        if (boton.id === "igual") {
-            try {
-                pantalla.textContent = eval(pantalla.textContent);
-            } catch {
-                pantalla.textContent = "ERROR!";
-            }
-            return;
-        }
+toggleButton1.addEventListener('click', () => {
+  pestaña1.classList.toggle('pestaña-visible1');
+  pestaña1.classList.toggle('pestaña-oculta1');
+});
 
-        if(pantalla.textContent === "0" || pantalla.textContent === "ERROR!") {
-            pantalla.textContent = botonApretado;
-        } else {
-            pantalla.textContent += botonApretado;
-        }
-    })
-})
+toggleButton2.addEventListener('click', () => {
+  pestaña2.classList.toggle('pestaña-visible2');
+  pestaña2.classList.toggle('pestaña-oculta2');
+});
+
+toggleButton3.addEventListener('click', () => {
+  pestaña3.classList.toggle('pestaña-visible3');
+  pestaña3.classList.toggle('pestaña-oculta3');
+});
+
+toggleButton4.addEventListener('click', () => {
+  pestaña4.classList.toggle('pestaña-visible4');
+  pestaña4.classList.toggle('pestaña-oculta4');
+});
+
+function sumArit(){
+
+    const suma1 =document.getElementById('n1');
+    const suma2 =document.getElementById('n2');
+
+    const result1 = suma1 + suma2
+
+    return result1.innerText= "El resultado de la suma es:" + " " + result1
+}
+function restaArit(){
+    const resta1 =document.getElementById('n3');
+    const resta2 =document.getElementById('n4');
+
+    const result2 = resta1 - resta2
+
+    return result2.innerText= "El resultado de la resta es:" + " " + result2
+}
+function multArit(){
+    const mult1 =document.getElementById('n5');
+    const mult2 =document.getElementById('n6');
+
+    const result3 = mult1 * mult2
+
+    return result3.innerText= "El resultado de la multiplicación es:" + " " + result3
+}
+function divArit(){
+    const div1 =document.getElementById('n7');
+    const div2 =document.getElementById('n8');
+
+    const result4 = div1 * div2
+
+    return result4.innerText= "El resultado de la division es:" + " " + result4
+}
